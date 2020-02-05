@@ -4,5 +4,14 @@
   "components": [
   ],
   "configuration": {
+    "swellSdkUrl": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": "https://cdn.swellrewards.com/loader/JiY-wIwEaNemLIT7R1Nbhg.js",
+      "params": {
+        "type": "text",
+        "label": "SRC to Swell JavaScript sdk"
+      }
+    }
   }
 }
