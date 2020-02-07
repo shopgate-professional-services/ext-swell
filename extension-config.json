@@ -11,6 +11,12 @@
       "id": "swellCustomer",
       "path": "frontend/reducers/swellCustomer.js",
       "type": "reducers"
+    },
+    {
+      "type": "portals",
+      "target": "app.globals",
+      "path": "frontend/portals/GlobalCssRules",
+      "id": "GlobalCssRules"
     }
   ],
   "configuration": {
