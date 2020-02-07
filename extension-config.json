@@ -2,6 +2,11 @@
   "version": "1.0.0",
   "id": "@shopgate-project/swell",
   "components": [
+    {
+      "id": "Subscribers",
+      "path": "frontend/subscriptions/index.js",
+      "type": "subscribers"
+    }
   ],
   "configuration": {
     "swellSdkUrl": {

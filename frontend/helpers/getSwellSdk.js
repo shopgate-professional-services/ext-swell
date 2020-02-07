@@ -24,8 +24,8 @@ const mountScript = (sdkSrc) => {
  * @param {number} iteration Number of recursive calls
  */
 const checkScript = (resolve, reject, iteration = 0) => {
-  if (window.spapi) {
-    resolve(window.spapi);
+  if (window.spapi && window.swellAPI) {
+    resolve({ spapi: window.spapi, swellAPI: window.swellAPI });
     return;
   }
 
