@@ -5,6 +5,7 @@ import {
   RECEIVE_SWELL_IDENTIFY_CUSTOMER,
   REQUEST_SWELL_IDENTIFY_CUSTOMER,
   ERROR_SWELL_IDENTIFY_CUSTOMER,
+  CLEAR_SWELL_CUSTOMER_DATA,
 } from '../constants';
 
 /**
@@ -55,4 +56,12 @@ export const receiveSwellIdentifyCustomer = swellCustomer => ({
  */
 export const errorSwellIdentifyCustomer = () => ({
   type: ERROR_SWELL_IDENTIFY_CUSTOMER,
+});
+
+/**
+ * Clear swell customer data
+ * @return {Object}
+ */
+export const clearSwellCustomerData = () => ({
+  type: CLEAR_SWELL_CUSTOMER_DATA,
 });

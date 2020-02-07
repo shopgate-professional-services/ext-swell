@@ -6,6 +6,11 @@
       "id": "Subscribers",
       "path": "frontend/subscriptions/index.js",
       "type": "subscribers"
+    },
+    {
+      "id": "swellCustomer",
+      "path": "frontend/reducers/swellCustomer.js",
+      "type": "reducers"
     }
   ],
   "configuration": {
