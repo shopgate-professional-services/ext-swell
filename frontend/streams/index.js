@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { userDataReceived$ } from '@shopgate/engage/user';
 import { SWELL_SETUP } from '../constants';
 
+// add jQuery toObservable plugin
 jQuery.fn.toObservable = function (eventName, selector) {
   return Observable.fromEvent(this, eventName, selector);
 };
