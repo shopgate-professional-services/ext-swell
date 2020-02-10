@@ -1,0 +1,10 @@
+{
+  "swell": {
+    "welcome": {
+      "greeting": "Hi, {firstName}",
+      "points": "You have {points} points",
+      "join_button": "Join now",
+      "sign_in_link": "Sign in"
+    }
+  }
+}

@@ -17,6 +17,17 @@
       "target": "app.globals",
       "path": "frontend/portals/GlobalCssRules",
       "id": "GlobalCssRules"
+    },
+    {
+      "id": "SwellWelcome",
+      "path": "frontend/widgets/SwellWelcome/index.jsx",
+      "type": "widgets",
+      "description": "Swell welcome widget"
+    },
+    {
+      "type": "translations",
+      "path": "frontend/locale/en-US.json",
+      "id": "locale/en-US"
     }
   ],
   "configuration": {
