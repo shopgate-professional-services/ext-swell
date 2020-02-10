@@ -3,7 +3,7 @@ import Icon from '@shopgate/pwa-common/components/Icon';
 import { swellIconSvg } from '../../config';
 
 /**
- * The calendar icon component.
+ * The TopHat icon component.
  * @param {Object} props The icon component properties.
  * @returns {JSX}
  */

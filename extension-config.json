@@ -37,13 +37,13 @@
       "params": {
         "label": "Swell text for button that leads to Rewards Page",
         "type": "text",
-        "required": true
+        "required": false
       }
     },
     "swellRewardsPath": {
       "type": "admin",
       "destination": "frontend",
-      "default": "/rewards",
+      "default": "/page/rewards",
       "params": {
         "label": "Swell Rewards Path",
         "type": "text",
@@ -57,7 +57,7 @@
       "params": {
         "label": "Svg for swell icon",
         "type": "text",
-        "required": true
+        "required": false
       }
     }
   }

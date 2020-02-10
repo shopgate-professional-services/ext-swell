@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from 'glamor';
-import { useNavigation } from '@shopgate/engage/core';
 import isIOSTheme from '@shopgate-ps/pwa-extension-kit/env/helpers/isIOSTheme';
 import TopHat from '../../icons/TopHat';
 import { showSwellNavigation, swellButtonText, swellRewardsPath } from '../../config';
@@ -13,7 +12,7 @@ const tabItemIconStyle = css({
   marginRight: 'auto',
   marginLeft: 'auto',
   marginBottom: '2px',
-});
+}).toString();
 
 /**
  * TabBarItem.
@@ -21,9 +20,7 @@ const tabItemIconStyle = css({
  * @param {string} path path to navigate to.
  * @returns {JSX}
  */
-const TabBarItem = ({ TabBarAction, path }) => {
-  const { push } = useNavigation();
-
+const TabBarItem = ({ TabBarAction, path, historyPush }) => {
   if (!isIOSTheme() || !showSwellNavigation) {
     return null;
   }
@@ -36,13 +33,13 @@ const TabBarItem = ({ TabBarAction, path }) => {
    */
   const handleClick = (e) => {
     e.preventDefault();
-    push({ pathname: swellRewardsPath });
+    historyPush({ pathname: swellRewardsPath });
   };
 
   return (
     <TabBarAction
       label={swellButtonText || 'swell.rewards_button'}
-      icon={<TopHat isHighlighted={isHighlighted} className={tabItemIconStyle} isTabBar />}
+      icon={<TopHat className={tabItemIconStyle} />}
       isHighlighted={isHighlighted}
       onClick={handleClick}
       aria-hidden
@@ -52,6 +49,7 @@ const TabBarItem = ({ TabBarAction, path }) => {
 };
 
 TabBarItem.propTypes = {
+  historyPush: PropTypes.func.isRequired,
   path: PropTypes.string.isRequired,
   TabBarAction: PropTypes.func.isRequired,
 };
