@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { I18n } from '@shopgate/engage/components';
 import Link from '@shopgate/pwa-common/components/Link';
 import { CHECKOUT_PATH } from '@shopgate/pwa-common/constants/RoutePaths';
+import getSwellSdk from '../../../../helpers/getSwellSdk';
 import styles from './style';
 
 /**
@@ -17,13 +18,17 @@ const LoggedInView = ({
   points,
   redeemButtonText,
 }) => {
+  useEffect(() => {
+    if (!window.swellAPI) {
+      getSwellSdk();
+    }
+  });
   /**
    * @param {Class} e event Class passed
    */
   const showModal = (e) => {
-    console.warn(e);
     e.preventDefault();
-    console.warn('showModal');
+    window.swellAPI.showPopupByType('HistoryPopup');
   };
 
   return (
