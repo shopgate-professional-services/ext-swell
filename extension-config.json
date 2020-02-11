@@ -28,6 +28,18 @@
       "type": "translations",
       "path": "frontend/locale/en-US.json",
       "id": "locale/en-US"
+    },
+    {
+      "id": "NavDrawerItem",
+      "path": "frontend/portals/NavDrawerItem/index.jsx",
+      "target": "nav-menu.home.before",
+      "type": "portals"
+    },
+    {
+      "id": "TabBarItem",
+      "path": "frontend/portals/TabBarItem/index.jsx",
+      "target": "tab-bar.cart.after",
+      "type": "portals"
     }
   ],
   "configuration": {
@@ -38,6 +50,45 @@
       "params": {
         "type": "text",
         "label": "SRC to Swell JavaScript sdk"
+      }
+    },
+    "showSwellNavigation": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": true,
+      "params": {
+        "label": "Should show navigation button in tab bar and nav drawer",
+        "type": "checkbox"
+      }
+    },
+    "swellButtonText": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": null,
+      "params": {
+        "label": "Swell text for button that leads to Rewards Page",
+        "type": "text",
+        "required": false
+      }
+    },
+    "swellRewardsPath": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": "/page/rewards",
+      "params": {
+        "label": "Swell Rewards Path",
+        "type": "text",
+        "required": true
+      }
+    },
+    "swellIconSvg": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": null,
+      "params": {
+        "label": "Svg for swell icon",
+        "type": "text",
+        "required": false
       }
     }
   }

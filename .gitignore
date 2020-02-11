@@ -63,3 +63,7 @@ package-lock.json
 # config
 extension/config.json
 frontend/config.json
+
+# IDE
+.idea/
+.vscode/
