@@ -1,7 +1,5 @@
 import {
-  REQUEST_SWELL_IDENTIFY_CUSTOMER,
-  RECEIVE_SWELL_IDENTIFY_CUSTOMER,
-  ERROR_SWELL_IDENTIFY_CUSTOMER,
+  RECEIVE_SWELL_CUSTOMER,
   CLEAR_SWELL_CUSTOMER_DATA,
 } from '../constants';
 
@@ -14,37 +12,19 @@ import {
 const swellCustomer = (
   state = {
     data: null,
-    isFetching: false,
-    isError: false,
   },
   action
 ) => {
   switch (action.type) {
-    case REQUEST_SWELL_IDENTIFY_CUSTOMER:
-      return {
-        ...state,
-        isFetching: true,
-        isError: false,
-      };
-    case RECEIVE_SWELL_IDENTIFY_CUSTOMER:
+    case RECEIVE_SWELL_CUSTOMER:
       return {
         ...state,
         data: action.swellCustomer,
-        isFetching: false,
-        isError: false,
-      };
-    case ERROR_SWELL_IDENTIFY_CUSTOMER:
-      return {
-        ...state,
-        isFetching: false,
-        isError: true,
       };
     case CLEAR_SWELL_CUSTOMER_DATA:
       return {
         ...state,
         data: null,
-        isFetching: false,
-        isError: false,
       };
     default:
       return state;
