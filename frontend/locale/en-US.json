@@ -6,6 +6,9 @@
       "join_button": "Join now",
       "sign_in_link": "Sign in"
     },
-    "rewards_button": "Rewards"
+    "rewards_button": "Rewards",
+    "cart": {
+      "points": "You have {points} rewards points"
+    }
   }
 }

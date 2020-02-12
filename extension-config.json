@@ -40,6 +40,12 @@
       "path": "frontend/portals/TabBarItem/index.jsx",
       "target": "tab-bar.cart.after",
       "type": "portals"
+    },
+    {
+      "id": "TabBarItem",
+      "path": "frontend/portals/Cart/index.jsx",
+      "target": "cart.coupon-field.after",
+      "type": "portals"
     }
   ],
   "configuration": {
