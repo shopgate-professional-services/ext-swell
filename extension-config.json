@@ -20,6 +20,11 @@
       "type": "portals"
     },
     {
+      "id": "RedeemProductsWidget",
+      "path": "frontend/widgets/RedeemProductsWidget",
+      "type": "widgets"
+    },
+    {
       "id": "Subscribers",
       "path": "frontend/subscriptions/index.js",
       "type": "subscribers"
