@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import CampaignCard from './components/CampaignCard';
+import styles from './style';
 import connect from './connector';
 
 /**
@@ -10,11 +12,18 @@ const SwellActiveCampaigns = ({ activeCampaigns, settings }) => {
     return null;
   }
 
-  console.warn(activeCampaigns);
+  const { backgroundColor, fontColor } = settings;
+
+  const render = activeCampaigns.map(campaign =>
+    <CampaignCard
+      key={campaign.id}
+      className={styles.card(backgroundColor, fontColor)}
+      campaign={campaign}
+    />);
 
   return (
-    <div>
-      Hi
+    <div className={styles.container}>
+      {render}
     </div>
   );
 };
