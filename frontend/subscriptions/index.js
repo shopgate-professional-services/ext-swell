@@ -3,6 +3,8 @@ import { getUserData, userDataReceived$, userDidLogout$ } from '@shopgate/engage
 import {
   clearSwellCustomerData,
   receiveSwellCustomer,
+  receiveSwellActiveCampaigns,
+  clearSwellActiveCampaignsData,
 } from '../action-creators';
 import getSwellSdk from '../helpers/getSwellSdk';
 import { SWELL_SETUP } from '../constants';
@@ -38,6 +40,9 @@ export default (subscribe) => {
 
       const { id, mail } = getUserData(getState()) || {};
 
+      const activeCampaigns = window.swellAPI.getActiveCampaigns();
+      dispatch(receiveSwellActiveCampaigns(activeCampaigns));
+
       if (!(id && mail)) {
         return;
       }
@@ -64,6 +69,7 @@ export default (subscribe) => {
     swellNeedsLogin = true;
 
     dispatch(clearSwellCustomerData());
+    dispatch(clearSwellActiveCampaignsData());
   });
 };
 
