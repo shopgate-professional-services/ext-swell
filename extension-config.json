@@ -18,6 +18,11 @@
       "path": "frontend/portals/TabBarItem/index.jsx",
       "target": "tab-bar.cart.after",
       "type": "portals"
+    },
+    {
+      "id": "RedeemProductsWidget",
+      "path": "frontend/widgets/RedeemProductsWidget",
+      "type": "widgets"
     }
   ],
   "configuration": {
