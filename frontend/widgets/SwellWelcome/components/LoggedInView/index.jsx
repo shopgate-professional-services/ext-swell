@@ -23,6 +23,7 @@ const LoggedInView = ({
       getSwellSdk();
     }
   });
+
   /**
    * @param {Class} e event Class passed
    */
