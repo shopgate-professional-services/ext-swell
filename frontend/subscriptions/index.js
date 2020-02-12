@@ -5,40 +5,36 @@ import {
   receiveSwellCustomer,
 } from '../action-creators';
 import getSwellSdk from '../helpers/getSwellSdk';
-import { SWELL_INITIALIZED, SWELL_SETUP } from '../constants';
+import { SWELL_SETUP } from '../constants';
 
 let swellReady = false;
 let swellNeedsLogin = true;
 
-const loginSwellUser = async (state) => {
+/**
+ * Login user to swell
+ * @param {Object} state state
+ */
+const loginSwellUser = (state) => {
   const { id, mail } = getUserData(state) || {};
 
   if (!(id && mail)) {
     return;
   }
 
-  const { swellAPI } = await getSwellSdk() || {};
-
-  console.warn('loginCustomer');
-  swellAPI.loginCustomer(mail, id);
+  window.swellAPI.loginCustomer(mail, id);
   swellNeedsLogin = false;
 };
 
 export default (subscribe) => {
-  subscribe(appDidStart$, async ({ dispatch, getState }) => {
+  subscribe(appDidStart$, ({ dispatch, getState }) => {
     try {
       getSwellSdk();
     } catch (error) {
       logger.error({ error, errorMessage: error.message }, 'error initializing Swell SDK');
     }
 
-    document.addEventListener(SWELL_INITIALIZED, () => {
-      console.warn(SWELL_INITIALIZED);
-    });
-
     document.addEventListener(SWELL_SETUP, () => {
       swellReady = true;
-      console.warn(SWELL_SETUP);
 
       const { id, mail } = getUserData(getState()) || {};
 
@@ -56,7 +52,7 @@ export default (subscribe) => {
     });
   });
 
-  subscribe(userDataReceived$, async ({ getState }) => {
+  subscribe(userDataReceived$, ({ getState }) => {
     if (!swellReady || !swellNeedsLogin) {
       return;
     }
