@@ -3,28 +3,6 @@
   "id": "@shopgate-project/swell",
   "components": [
     {
-      "id": "Subscribers",
-      "path": "frontend/subscriptions/index.js",
-      "type": "subscribers"
-    },
-    {
-      "id": "swellCustomer",
-      "path": "frontend/reducers/swellCustomer.js",
-      "type": "reducers"
-    },
-    {
-      "type": "portals",
-      "target": "app.globals",
-      "path": "frontend/portals/GlobalCssRules",
-      "id": "GlobalCssRules"
-    },
-    {
-      "id": "SwellWelcome",
-      "path": "frontend/widgets/SwellWelcome/index.jsx",
-      "type": "widgets",
-      "description": "Swell welcome widget"
-    },
-    {
       "type": "translations",
       "path": "frontend/locale/en-US.json",
       "id": "locale/en-US"
@@ -40,6 +18,28 @@
       "path": "frontend/portals/TabBarItem/index.jsx",
       "target": "tab-bar.cart.after",
       "type": "portals"
+    },
+    {
+      "id": "Subscribers",
+      "path": "frontend/subscriptions/index.js",
+      "type": "subscribers"
+    },
+    {
+      "id": "swellReducer",
+      "path": "frontend/reducers/index.js",
+      "type": "reducers"
+    },
+    {
+      "type": "portals",
+      "target": "app.globals",
+      "path": "frontend/portals/GlobalCssRules",
+      "id": "GlobalCssRules"
+    },
+    {
+      "id": "SwellWelcome",
+      "path": "frontend/widgets/SwellWelcome/index.jsx",
+      "type": "widgets",
+      "description": "Swell welcome widget"
     }
   ],
   "configuration": {

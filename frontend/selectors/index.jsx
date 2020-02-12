@@ -1,17 +1,18 @@
 import { createSelector } from 'reselect';
-import { REDUX_NAMES_SPACE_SWELL_CUSTOMER } from '../constants';
+import { REDUX_NAMES_SPACE_SWELL } from '../constants';
 
 /**
  * @param {Object} state The application State
  * @returns {Object}
  */
-export const getSwellCustomerState = state =>
-  state.extensions[REDUX_NAMES_SPACE_SWELL_CUSTOMER];
+export const getSwellState = state =>
+  state.extensions[REDUX_NAMES_SPACE_SWELL];
 
-export const getSwellCustomerIsFetching = createSelector(
-  getSwellCustomerState,
-  swellCustomer => swellCustomer.isFetching
-);
+/**
+ * @param {Object} state The application State
+ * @returns {Object}
+ */
+export const getSwellCustomerState = state => getSwellState(state).customer;
 
 export const getSwellCustomerData = createSelector(
   getSwellCustomerState,

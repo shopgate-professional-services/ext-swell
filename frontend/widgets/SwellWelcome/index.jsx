@@ -9,12 +9,11 @@ import connect from './connector';
  */
 const SwellWelcome = ({
   firstName,
-  isFetching,
   loggedIn,
   settings,
   points,
 }) => {
-  if (isFetching) {
+  if (!settings) {
     return null;
   }
 
@@ -56,7 +55,6 @@ const SwellWelcome = ({
 
 SwellWelcome.propTypes = {
   firstName: PropTypes.string,
-  isFetching: PropTypes.bool,
   loggedIn: PropTypes.bool,
   points: PropTypes.number,
   settings: PropTypes.shape(),
@@ -64,7 +62,6 @@ SwellWelcome.propTypes = {
 
 SwellWelcome.defaultProps = {
   firstName: null,
-  isFetching: true,
   loggedIn: false,
   points: 0,
   settings: {},
