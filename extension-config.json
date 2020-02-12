@@ -30,8 +30,8 @@
       "type": "subscribers"
     },
     {
-      "id": "swellCustomer",
-      "path": "frontend/reducers/swellCustomer.js",
+      "id": "swellReducer",
+      "path": "frontend/reducers/index.js",
       "type": "reducers"
     },
     {

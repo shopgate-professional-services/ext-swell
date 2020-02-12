@@ -1,6 +1,7 @@
 import {
   RECEIVE_SWELL_CUSTOMER,
   CLEAR_SWELL_CUSTOMER_DATA,
+  RECEIVE_REDEMPTION_OPTIONS,
 } from '../constants';
 
 /**
@@ -11,6 +12,16 @@ import {
 export const receiveSwellCustomer = swellCustomer => ({
   type: RECEIVE_SWELL_CUSTOMER,
   swellCustomer,
+});
+
+/**
+ * Receive swell id customer
+ * @param {Array} redemptionOptions Swell getActiveRedemptionOptions
+ * @return {Object}
+ */
+export const receiveRedemptionOptions = redemptionOptions => ({
+  type: RECEIVE_REDEMPTION_OPTIONS,
+  redemptionOptions,
 });
 
 /**
