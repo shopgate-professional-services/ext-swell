@@ -33,7 +33,7 @@ const SwellWelcome = ({
     loggedOutBackgroundImage,
   } = settings || {};
 
-  const render = loggedIn ?
+  return loggedIn ?
     <LoggedInView
       buttonBackgroundColor={buttonBackgroundColor}
       buttonFontColor={buttonFontColor}
@@ -52,8 +52,6 @@ const SwellWelcome = ({
       signInText={signInText}
       loggedOutBackgroundImage={loggedOutBackgroundImage}
     />;
-
-  return render;
 };
 
 SwellWelcome.propTypes = {
