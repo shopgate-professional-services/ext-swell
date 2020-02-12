@@ -1,0 +1,22 @@
+import {
+  RECEIVE_SWELL_CUSTOMER,
+  CLEAR_SWELL_CUSTOMER_DATA,
+} from '../constants';
+
+/**
+ * Receive swell id customer
+ * @param {Object} swellCustomer Swell customer
+ * @return {Object}
+ */
+export const receiveSwellCustomer = swellCustomer => ({
+  type: RECEIVE_SWELL_CUSTOMER,
+  swellCustomer,
+});
+
+/**
+ * Clear swell customer data
+ * @return {Object}
+ */
+export const clearSwellCustomerData = () => ({
+  type: CLEAR_SWELL_CUSTOMER_DATA,
+});
