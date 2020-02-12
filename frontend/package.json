@@ -1,7 +1,7 @@
 {
   "name": "@shopgate-project/swell",
   "version": "1.0.0",
-  "description": "An awesome extesion for my awesome organization",
+  "description": "Integration of swell",
   "license": "Apache-2.0",
   "scripts": {
     "test": "jest",
@@ -52,5 +52,8 @@
   },
   "peerDependencies": {
     "@shopgate/engage": "^6.10.0"
+  },
+  "dependencies": {
+    "@shopgate-ps/pwa-extension-kit": "^0.7.1"
   }
 }
