@@ -10,8 +10,7 @@ const optionWrapper = css({
   width: '100%',
   flexFlow: 'row wrap',
   alignContent: 'space-between',
-  paddingLeft: 6,
-  paddingTop: 6,
+  marginLeft: 12,
 }).toString();
 
 const headline = css({
