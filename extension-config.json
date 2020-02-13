@@ -32,6 +32,12 @@
       "description": "Redeem Product Widget"
     },
     {
+      "id": "RedeemOptionsWidget",
+      "path": "frontend/widgets/RedeemOptionsWidget",
+      "type": "widgets",
+      "description": "Redeem Product Widget"
+    },
+    {
       "id": "Subscribers",
       "path": "frontend/subscriptions/index.js",
       "type": "subscribers"
