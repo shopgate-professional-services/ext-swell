@@ -2,10 +2,8 @@ import { css } from 'glamor';
 
 const container = css({
   margin: '0 auto',
-  display: 'flex',
-  flexWrap: 'wrap',
+  overflow: 'hidden',
   width: '90%',
-
 }).toString();
 
 /**
@@ -14,14 +12,13 @@ const container = css({
  * @returns {Object}
  */
 const card = (backgroundColor, color) => css({
+  float: 'left',
+  position: 'relative',
   backgroundColor,
   color,
   margin: 10,
-  width: '40%',
-  height: '120px',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
+  width: '44%',
+  paddingBottom: '44%',
 }).toString();
 
 export default {

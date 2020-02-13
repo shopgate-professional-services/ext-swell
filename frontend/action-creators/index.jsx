@@ -2,7 +2,6 @@ import {
   RECEIVE_SWELL_CUSTOMER,
   CLEAR_SWELL_CUSTOMER_DATA,
   RECEIVE_SWELL_ACTIVE_CAMPAIGNS,
-  CLEAR_SWELL_ACTIVE_CAMPAIGNS_DATA,
 } from '../constants';
 
 /**
@@ -25,18 +24,10 @@ export const clearSwellCustomerData = () => ({
 
 /**
  * Receive swell active campaigns data
- * @param {Object} activeCampaigns Swell customer
+ * @param {Object} activeCampaigns Swell activeCampaigns info
  * @return {Object}
  */
 export const receiveSwellActiveCampaigns = activeCampaigns => ({
   type: RECEIVE_SWELL_ACTIVE_CAMPAIGNS,
   activeCampaigns,
-});
-
-/**
- * Clear swell active campaigns data
- * @return {Object}
- */
-export const clearSwellActiveCampaignsData = () => ({
-  type: CLEAR_SWELL_ACTIVE_CAMPAIGNS_DATA,
 });

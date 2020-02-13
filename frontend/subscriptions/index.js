@@ -4,10 +4,9 @@ import {
   clearSwellCustomerData,
   receiveSwellCustomer,
   receiveSwellActiveCampaigns,
-  clearSwellActiveCampaignsData,
 } from '../action-creators';
 import getSwellSdk from '../helpers/getSwellSdk';
-import { SWELL_SETUP } from '../constants';
+import { SWELL_SETUP, SWELL_INIT } from '../constants';
 
 let swellReady = false;
 let swellNeedsLogin = true;
@@ -35,13 +34,15 @@ export default (subscribe) => {
       logger.error({ error, errorMessage: error.message }, 'error initializing Swell SDK');
     }
 
+    document.addEventListener(SWELL_INIT, () => {
+      const activeCampaigns = window.swellAPI.getActiveCampaigns();
+      dispatch(receiveSwellActiveCampaigns(activeCampaigns));
+    });
+
     document.addEventListener(SWELL_SETUP, () => {
       swellReady = true;
 
       const { id, mail } = getUserData(getState()) || {};
-
-      const activeCampaigns = window.swellAPI.getActiveCampaigns();
-      dispatch(receiveSwellActiveCampaigns(activeCampaigns));
 
       if (!(id && mail)) {
         return;
@@ -69,7 +70,6 @@ export default (subscribe) => {
     swellNeedsLogin = true;
 
     dispatch(clearSwellCustomerData());
-    dispatch(clearSwellActiveCampaignsData());
   });
 };
 

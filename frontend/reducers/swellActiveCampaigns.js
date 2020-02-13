@@ -1,6 +1,5 @@
 import {
   RECEIVE_SWELL_ACTIVE_CAMPAIGNS,
-  CLEAR_SWELL_ACTIVE_CAMPAIGNS_DATA,
 } from '../constants';
 
 /**
@@ -20,11 +19,6 @@ const swellActiveCampaigns = (
       return {
         ...state,
         data: action.activeCampaigns,
-      };
-    case CLEAR_SWELL_ACTIVE_CAMPAIGNS_DATA:
-      return {
-        ...state,
-        data: null,
       };
     default:
       return state;
