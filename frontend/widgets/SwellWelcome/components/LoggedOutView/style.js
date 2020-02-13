@@ -2,12 +2,13 @@ import { css } from 'glamor';
 
 /**
  * @param {string} color font color for widget
- * @param {string} backgroundImage background image for widget
+ * @param {string} background background for widget
+ * @param {string} margin margin value for widget
  * @returns {Function}
  */
-const container = (color, backgroundImage) => css({
+const container = (color, background, margin) => css({
   color,
-  backgroundImage,
+  background,
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
@@ -15,6 +16,7 @@ const container = (color, backgroundImage) => css({
   height: '450px',
   width: '100%',
   textAlign: 'center',
+  margin,
 }).toString();
 
 const title = css({

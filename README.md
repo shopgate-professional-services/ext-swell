@@ -20,7 +20,8 @@ Widget can be configured in Shopgate Merchant admin and serves as a welcome noti
 - `signUpText` (string): text for sign up button
 - `accountText` (string): text for account notice
 - `signInText` (string): text for sign in notice
-- `loggedOutBackgroundImage` (string): url css style value for backgroundImage of logged out widget
+- `loggedOutBackground` (string): css background value for logged out view
+- `widgetMargin` (string): css margin value for widget
 
 
 ## About Shopgate	

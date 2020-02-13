@@ -1,11 +1,16 @@
 import { css } from 'glamor';
 
-const container = css({
+/**
+ * @param { string} margin margin value for widget
+ * @returns {Function}
+ */
+const container = margin => css({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
   height: '200px',
+  margin,
 }).toString();
 
 const buttonContainer = css({

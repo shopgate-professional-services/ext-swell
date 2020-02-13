@@ -29,7 +29,8 @@ const SwellWelcome = ({
     signUpText,
     accountText,
     signInText,
-    loggedOutBackgroundImage,
+    loggedOutBackground,
+    widgetMargin,
   } = settings || {};
 
   return loggedIn ?
@@ -41,6 +42,7 @@ const SwellWelcome = ({
       firstName={firstName}
       points={points}
       redeemButtonText={redeemButtonText}
+      widgetMargin={widgetMargin}
     /> :
     <LoggedOutView
       loggedOutTitleFontColor={loggedOutTitleFontColor}
@@ -49,7 +51,8 @@ const SwellWelcome = ({
       signUpText={signUpText}
       accountText={accountText}
       signInText={signInText}
-      loggedOutBackgroundImage={loggedOutBackgroundImage}
+      loggedOutBackground={loggedOutBackground}
+      widgetMargin={widgetMargin}
     />;
 };
 

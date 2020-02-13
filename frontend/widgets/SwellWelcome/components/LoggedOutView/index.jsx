@@ -9,15 +9,16 @@ import styles from './style';
  * @returns {JSX}
  */
 const LoggedOutView = ({
-  loggedOutBackgroundImage,
+  loggedOutBackground,
   loggedOutTitleFontColor,
   loggedOutTitle,
   loggedOutSubtext,
   signUpText,
   accountText,
   signInText,
+  widgetMargin,
 }) => (
-  <div className={styles.container(loggedOutTitleFontColor, loggedOutBackgroundImage)}>
+  <div className={styles.container(loggedOutTitleFontColor, loggedOutBackground, widgetMargin)}>
     <div className={styles.title}>
       {loggedOutTitle}
     </div>
@@ -49,11 +50,12 @@ LoggedOutView.propTypes = {
   loggedOutTitleFontColor: PropTypes.string.isRequired,
   signInText: PropTypes.string.isRequired,
   signUpText: PropTypes.string.isRequired,
-  loggedOutBackgroundImage: PropTypes.string,
+  widgetMargin: PropTypes.string.isRequired,
+  loggedOutBackground: PropTypes.string,
 };
 
 LoggedOutView.defaultProps = {
-  loggedOutBackgroundImage: null,
+  loggedOutBackground: null,
 };
 
 export default LoggedOutView;
