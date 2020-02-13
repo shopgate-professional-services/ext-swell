@@ -20,9 +20,16 @@
       "type": "portals"
     },
     {
+      "id": "ProductItemPrice",
+      "path": "frontend/portals/ProductItemPrice/index.jsx",
+      "target": "product-item.price",
+      "type": "portals"
+    },
+    {
       "id": "RedeemProductsWidget",
       "path": "frontend/widgets/RedeemProductsWidget",
-      "type": "widgets"
+      "type": "widgets",
+      "description": "Redeem Product Widget"
     },
     {
       "id": "Subscribers",

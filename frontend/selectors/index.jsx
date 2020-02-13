@@ -8,7 +8,18 @@ import { REDUX_NAMES_SPACE_SWELL } from '../constants';
 export const getSwellState = state =>
   state.extensions[REDUX_NAMES_SPACE_SWELL];
 
+/**
+ * Get Swell Customer State
+ * @param {Object} state Redux state
+ * @return {Object}
+ */
 export const getSwellCustomerState = state => getSwellState(state).customer;
+
+/**
+ * Get Swell Redemption Option State
+ * @param {Object} state Redux state
+ * @return {Object}
+ */
 export const getSwellRedemptionOptionsState = state => getSwellState(state).redemptionOptions;
 
 export const getSwellCustomerIsFetching = createSelector(
@@ -43,6 +54,19 @@ export const getSwellRedemptionOptionsTypeProducts = createSelector(
 
     return redemptionOptions.filter(({ discountType }) => discountType === 'product');
   }
+);
+
+export const getSwellRedemptionOptionsTypeProductIds = createSelector(
+  getSwellRedemptionOptionsTypeProducts,
+  redemptionProducts => redemptionProducts.map(({ appliesToId }) => appliesToId)
+);
+
+export const getSwellRedemptionOptionsTypeProductById = createSelector(
+  getSwellRedemptionOptionsTypeProducts,
+  (_, { productId }) => productId,
+  (redemptionProducts, productId) => (
+    redemptionProducts.find(({ appliesToId }) => `${appliesToId}` === productId) || null
+  )
 );
 
 export const getSwellRedemptionOptionsTypeOther = createSelector(
