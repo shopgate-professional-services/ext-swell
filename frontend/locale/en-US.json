@@ -2,6 +2,7 @@
   "swell": {
     "rewards_button": "Rewards",
     "points": "{points, plural, =0 {# Points} =1 {# Point} other {# Points}}",
-    "redeem_for_products": "Redeem for Products"
+    "redeem_for_products": "Redeem for Products",
+    "rewards": "Rewards"
   }
 }

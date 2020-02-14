@@ -32,6 +32,12 @@
       "description": "Redeem Product Widget"
     },
     {
+      "id": "RedeemOptionsWidget",
+      "path": "frontend/widgets/RedeemOptionsWidget",
+      "type": "widgets",
+      "description": "Redeem Options Widget"
+    },
+    {
       "id": "Subscribers",
       "path": "frontend/subscriptions/index.js",
       "type": "subscribers"
@@ -46,6 +52,12 @@
       "target": "app.globals",
       "path": "frontend/portals/GlobalCssRules",
       "id": "GlobalCssRules"
+    },
+    {
+      "id": "SwellActiveCampaigns",
+      "path": "frontend/widgets/SwellActiveCampaigns/index.jsx",
+      "type": "widgets",
+      "description": "Swell active campaings widget"
     }
   ],
   "configuration": {
