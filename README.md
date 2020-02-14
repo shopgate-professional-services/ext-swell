@@ -2,6 +2,11 @@
 
 This extension integrates a Shopgate app with the [Swell](https://www.swellrewards.com/). Swell is a loyalty provider that rewards the user with points for discounts and free items.
 
+#### Swell Active Campaigns Widget
+Widget can be configured in Shopgate Merchant admin and serves as a notice for valid campaigns to earn points. You can add the following configuration to the widget in the settings object.
+- `backgroundColor` (string): background color for campaign cards.
+- `fontColor` (string): font color for campaign cards.
+
 ## About Shopgate	
 
 Shopgate is the leading mobile commerce platform.	
