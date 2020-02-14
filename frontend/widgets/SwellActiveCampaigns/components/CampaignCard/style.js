@@ -1,13 +1,21 @@
 import { css } from 'glamor';
 
 const content = css({
-  position: 'absolute',
   textAlign: 'center',
   lineHeight: '1',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  overflow: 'hidden',
+  width: 'calc(50% - 10px)',
+  margin: 5,
+  padding: 5,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+
+  ':after': {
+    content: ' ',
+    display: 'block',
+    paddingBottom: '100%',
+  },
+
 }).toString();
 
 const title = css({

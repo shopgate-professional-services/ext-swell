@@ -9,14 +9,14 @@ const CampaignCard = ({ campaign, className }) => {
   const { title, rewardText } = campaign;
 
   return (
-    <div className={className}>
-      <div className={styles.content}>
-        <div className={styles.title}>
+    <div className={`${className} ${styles.content}`}>
+      <div>
+        <p className={styles.title}>
           {title}
-        </div>
-        <div className={styles.subtext}>
+        </p>
+        <p className={styles.subtext}>
           {rewardText}
-        </div>
+        </p>
       </div>
     </div>
   );
