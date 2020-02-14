@@ -35,7 +35,7 @@
       "id": "RedeemOptionsWidget",
       "path": "frontend/widgets/RedeemOptionsWidget",
       "type": "widgets",
-      "description": "Redeem Product Widget"
+      "description": "Redeem Options Widget"
     },
     {
       "id": "Subscribers",
