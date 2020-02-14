@@ -16,7 +16,7 @@ const headline = css({
  * @param {string[]} redeemProducts Swell product redemption option Id
  * @return {JSX}
  */
-const RedeemProductsSlider = ({ fetchProducts, redeemProductIds = [] }) => {
+const RedeemProductsSlider = ({ fetchProducts, redeemProductIds }) => {
   useEffect(() => {
     if (!redeemProductIds.length) {
       return;
@@ -44,12 +44,11 @@ const RedeemProductsSlider = ({ fetchProducts, redeemProductIds = [] }) => {
 };
 
 RedeemProductsSlider.propTypes = {
-  fetchProducts: PropTypes.func,
+  fetchProducts: PropTypes.func.isRequired,
   redeemProductIds: PropTypes.arrayOf(PropTypes.string),
 };
 
 RedeemProductsSlider.defaultProps = {
-  fetchProducts: () => {},
   redeemProductIds: [],
 };
 
