@@ -21,6 +21,7 @@ const RedeemProductsSlider = ({ fetchProducts, redeemProductIds = [] }) => {
     if (!redeemProductIds.length) {
       return;
     }
+
     fetchProducts(redeemProductIds);
   }, [redeemProductIds]);
 
