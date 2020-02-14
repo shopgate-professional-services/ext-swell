@@ -4,9 +4,10 @@ import {
   clearSwellCustomerData,
   receiveRedemptionOptions,
   receiveSwellCustomer,
+  receiveSwellActiveCampaigns,
 } from '../action-creators';
 import getSwellSdk from '../helpers/getSwellSdk';
-import { SWELL_SETUP } from '../constants';
+import { SWELL_SETUP, SWELL_INIT } from '../constants';
 
 let swellReady = false;
 let swellNeedsLogin = true;
@@ -33,6 +34,11 @@ export default (subscribe) => {
     } catch (error) {
       logger.error({ error, errorMessage: error.message }, 'error initializing Swell SDK');
     }
+
+    document.addEventListener(SWELL_INIT, () => {
+      const activeCampaigns = window.swellAPI.getActiveCampaigns();
+      dispatch(receiveSwellActiveCampaigns(activeCampaigns));
+    });
 
     document.addEventListener(SWELL_SETUP, () => {
       swellReady = true;

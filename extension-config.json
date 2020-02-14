@@ -52,6 +52,12 @@
       "target": "app.globals",
       "path": "frontend/portals/GlobalCssRules",
       "id": "GlobalCssRules"
+    },
+    {
+      "id": "SwellActiveCampaigns",
+      "path": "frontend/widgets/SwellActiveCampaigns/index.jsx",
+      "type": "widgets",
+      "description": "Swell active campaings widget"
     }
   ],
   "configuration": {
