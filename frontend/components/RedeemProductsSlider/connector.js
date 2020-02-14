@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchProductsById } from '@shopgate/engage/product';
+import { getSwellRedemptionOptionsTypeProductIds } from '../../selectors';
 
 /**
  * Maps state to prop
@@ -7,7 +8,7 @@ import { fetchProductsById } from '@shopgate/engage/product';
  * @return {Object}
  */
 const mapStateToProps = state => ({
-  productIds: ['4506274168963', '4506288455811', '4506267648131', '4506281640067'],
+  redeemProductIds: getSwellRedemptionOptionsTypeProductIds(state),
 });
 
 /**

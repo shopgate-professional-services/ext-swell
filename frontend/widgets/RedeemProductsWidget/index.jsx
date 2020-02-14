@@ -1,24 +1,10 @@
-import React, { useEffect } from 'react';
-import { useTheme } from '@shopgate/engage/core';
-import connect from './connector';
+import React from 'react';
+import RedeemProductsSlider from '../../components/RedeemProductsSlider';
 
-const RedeemProductsWidget = ({ fetchProducts, productIds }) => {
-  const { ProductSlider } = useTheme();
-  useEffect(() => {
-    if (!productIds.length) {
-      return;
-    }
-    fetchProducts(productIds);
-  }, [productIds]);
-  fetchProducts(productIds);
-  return (
-    <div>
-      <div> swell slider </div>
-      <ProductSlider
-        productIds={productIds}
-      />
-    </div>
-  );
-};
+/**
+ * RedeemProductsWidget
+ * @return {JSX}
+ */
+const RedeemProductsWidget = () => <RedeemProductsSlider />;
 
-export default connect(RedeemProductsWidget);
+export default RedeemProductsWidget;

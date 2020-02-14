@@ -36,6 +36,8 @@ export default (subscribe) => {
 
     document.addEventListener(SWELL_SETUP, () => {
       swellReady = true;
+      const redemptionOptions = window.swellAPI.getActiveRedemptionOptions();
+      dispatch(receiveRedemptionOptions(redemptionOptions));
 
       const { id, mail } = getUserData(getState()) || {};
 
@@ -50,9 +52,6 @@ export default (subscribe) => {
 
       const swellCustomer = window.swellAPI.getCustomerDetails();
       dispatch(receiveSwellCustomer(swellCustomer));
-
-      const redemptionOptions = window.swellAPI.getActiveRedemptionOptions();
-      dispatch(receiveRedemptionOptions(redemptionOptions));
     });
   });
 
