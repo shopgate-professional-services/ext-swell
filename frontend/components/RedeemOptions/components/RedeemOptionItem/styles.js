@@ -12,16 +12,26 @@ const { colors: { primary, primaryContrast } } = themeConfig;
  */
 const container = (backgroundColor, textColor, backgroundImageUrl) => {
   const rules = {
-    padding: 7,
     color: textColor || primaryContrast,
     backgroundColor: backgroundColor || primary,
     marginRight: 6,
     marginBottom: 6,
-    textAlign: 'center',
     position: 'relative',
-    display: 'flex',
     minHeight: '80px',
+    textAlign: 'center',
+    lineHeight: '1',
+    width: 'calc(50% - 10px)',
+    margin: 5,
+    padding: 5,
+    display: 'flex',
     alignItems: 'center',
+    justifyContent: 'center',
+
+    ':after': {
+      content: ' ',
+      display: 'block',
+      paddingBottom: '100%',
+    },
   };
 
   if (backgroundImageUrl) {
@@ -34,20 +44,13 @@ const container = (backgroundColor, textColor, backgroundImageUrl) => {
   return css(rules).toString();
 };
 
-const pointsPrice = css({
-  position: 'absolute',
-  bottom: '2px',
-  left: 0,
-  width: '100%',
-});
-
 const name = css({
   fontSize: '22px',
   fontWeight: 'bold',
+  marginBottom: 5,
 }).toString();
 
 export default {
   container,
   name,
-  pointsPrice,
 };

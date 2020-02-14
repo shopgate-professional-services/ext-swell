@@ -30,8 +30,10 @@ const RedeemOptionItem = ({
       key={key}
       className={styles.container(backgroundColor, textColor, backgroundImageUrl)}
     >
-      <div className={styles.name}>{name}</div>
-      <div className={styles.pointsPrice}>{pointsPrice}</div>
+      <div>
+        <p className={styles.name}>{name}</p>
+        <p>{pointsPrice}</p>
+      </div>
     </div>
   );
 };

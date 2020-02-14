@@ -9,8 +9,6 @@ const optionWrapper = css({
   display: 'flex',
   width: '100%',
   flexFlow: 'row wrap',
-  alignContent: 'space-between',
-  marginLeft: 12,
 }).toString();
 
 const headline = css({

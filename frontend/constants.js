@@ -14,7 +14,3 @@ export const SWELL_INIT = 'swell:initialized';
 // Redux namespace
 const EXTENSION_NAME = '@shopgate-project/swell';
 export const REDUX_NAMES_SPACE_SWELL = `${EXTENSION_NAME}/swellReducer`;
-
-// Redux namespace
-const EXTENSION_NAME = '@shopgate-project/swell';
-export const REDUX_NAMES_SPACE_SWELL = `${EXTENSION_NAME}/swellReducer`;
