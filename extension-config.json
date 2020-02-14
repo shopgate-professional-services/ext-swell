@@ -20,6 +20,24 @@
       "type": "portals"
     },
     {
+      "id": "ProductItemPrice",
+      "path": "frontend/portals/ProductItemPrice/index.jsx",
+      "target": "product-item.price",
+      "type": "portals"
+    },
+    {
+      "id": "RedeemProductsWidget",
+      "path": "frontend/widgets/RedeemProductsWidget",
+      "type": "widgets",
+      "description": "Redeem Product Widget"
+    },
+    {
+      "id": "RedeemOptionsWidget",
+      "path": "frontend/widgets/RedeemOptionsWidget",
+      "type": "widgets",
+      "description": "Redeem Options Widget"
+    },
+    {
       "id": "Subscribers",
       "path": "frontend/subscriptions/index.js",
       "type": "subscribers"
@@ -40,6 +58,12 @@
       "path": "frontend/widgets/SwellWelcome/index.jsx",
       "type": "widgets",
       "description": "Swell welcome widget"
+    },
+    {
+      "id": "SwellActiveCampaigns",
+      "path": "frontend/widgets/SwellActiveCampaigns/index.jsx",
+      "type": "widgets",
+      "description": "Swell active campaings widget"
     }
   ],
   "configuration": {
