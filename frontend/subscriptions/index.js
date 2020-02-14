@@ -2,6 +2,7 @@ import { appDidStart$, logger } from '@shopgate/engage/core';
 import { getUserData, userDataReceived$, userDidLogout$ } from '@shopgate/engage/user';
 import {
   clearSwellCustomerData,
+  receiveRedemptionOptions,
   receiveSwellCustomer,
   receiveSwellActiveCampaigns,
 } from '../action-creators';
@@ -41,6 +42,8 @@ export default (subscribe) => {
 
     document.addEventListener(SWELL_SETUP, () => {
       swellReady = true;
+      const redemptionOptions = window.swellAPI.getActiveRedemptionOptions();
+      dispatch(receiveRedemptionOptions(redemptionOptions));
 
       const { id, mail } = getUserData(getState()) || {};
 
