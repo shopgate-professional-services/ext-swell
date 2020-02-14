@@ -1,7 +1,10 @@
 import { css } from 'glamor';
+import { themeConfig } from '@shopgate/pwa-common/helpers/config';
+
+const { colors: { primary, primaryContrast } } = themeConfig;
 
 /**
- * @param { string} margin margin value for widget
+ * @param { string} [margin] margin value for widget
  * @returns {Function}
  */
 const container = margin => css({
@@ -10,7 +13,7 @@ const container = margin => css({
   justifyContent: 'center',
   alignItems: 'center',
   height: '200px',
-  margin,
+  margin: margin || '10px 0',
 }).toString();
 
 const buttonContainer = css({
@@ -23,29 +26,29 @@ const buttonContainer = css({
 }).toString();
 
 /**
- * @param {string} headerTextColor color for text
+ * @param {string} [headerTextColor] color for text
  * @returns {Function}
  */
 const heading = headerTextColor => css({
   fontSize: '26px !important',
   lineHeight: 1,
-  color: `${headerTextColor} !important`,
+  color: `${headerTextColor || primary} !important`,
 }).toString();
 
 /**
- * @param {string} color color for font in button
- * @param {string} backgroundColor backgroundColor for button
+ * @param {string} [color] color for font in button
+ * @param {string} [backgroundColor] backgroundColor for button
  * @returns {Function}
  */
 const button = (color, backgroundColor) => css({
   marginBottom: '10px',
-  backgroundColor,
-  color,
+  backgroundColor: backgroundColor || primary,
+  color: color || primaryContrast,
   width: '40%',
   maxWidth: '175px',
   padding: '10px',
   borderRadius: '5px',
-  border: `1px solid ${backgroundColor}`,
+  border: `1px solid ${backgroundColor || primary}`,
   textAlign: 'center',
 }).toString();
 

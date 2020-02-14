@@ -31,7 +31,7 @@ const SwellWelcome = ({
     signInText,
     loggedOutBackground,
     widgetMargin,
-  } = settings || {};
+  } = settings;
 
   return loggedIn ?
     <LoggedInView
@@ -53,6 +53,8 @@ const SwellWelcome = ({
       signInText={signInText}
       loggedOutBackground={loggedOutBackground}
       widgetMargin={widgetMargin}
+      buttonBackgroundColor={buttonBackgroundColor}
+      buttonFontColor={buttonFontColor}
     />;
 };
 

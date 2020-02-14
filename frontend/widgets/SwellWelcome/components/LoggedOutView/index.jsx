@@ -17,6 +17,8 @@ const LoggedOutView = ({
   accountText,
   signInText,
   widgetMargin,
+  buttonBackgroundColor,
+  buttonFontColor,
 }) => (
   <div className={styles.container(loggedOutTitleFontColor, loggedOutBackground, widgetMargin)}>
     <div className={styles.title}>
@@ -27,7 +29,7 @@ const LoggedOutView = ({
     </div>
     <Link
       href={REGISTER_PATH}
-      className={styles.joinButton}
+      className={styles.joinButton(buttonBackgroundColor, buttonFontColor)}
     >
       <I18n.Text string={signUpText} />
     </Link>
@@ -47,15 +49,21 @@ LoggedOutView.propTypes = {
   accountText: PropTypes.string.isRequired,
   loggedOutSubtext: PropTypes.string.isRequired,
   loggedOutTitle: PropTypes.string.isRequired,
-  loggedOutTitleFontColor: PropTypes.string.isRequired,
   signInText: PropTypes.string.isRequired,
   signUpText: PropTypes.string.isRequired,
-  widgetMargin: PropTypes.string.isRequired,
+  buttonBackgroundColor: PropTypes.string,
+  buttonFontColor: PropTypes.string,
   loggedOutBackground: PropTypes.string,
+  loggedOutTitleFontColor: PropTypes.string,
+  widgetMargin: PropTypes.string,
 };
 
 LoggedOutView.defaultProps = {
+  loggedOutTitleFontColor: null,
   loggedOutBackground: null,
+  buttonBackgroundColor: null,
+  buttonFontColor: null,
+  widgetMargin: null,
 };
 
 export default LoggedOutView;

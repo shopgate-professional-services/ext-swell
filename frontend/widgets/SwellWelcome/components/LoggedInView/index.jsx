@@ -53,19 +53,23 @@ const LoggedInView = ({
 };
 
 LoggedInView.propTypes = {
-  buttonBackgroundColor: PropTypes.string.isRequired,
-  buttonFontColor: PropTypes.string.isRequired,
-  headerTextColor: PropTypes.string.isRequired,
   historyButtonText: PropTypes.string.isRequired,
   redeemButtonText: PropTypes.string.isRequired,
-  widgetMargin: PropTypes.string.isRequired,
+  buttonBackgroundColor: PropTypes.string,
+  buttonFontColor: PropTypes.string,
   firstName: PropTypes.string,
+  headerTextColor: PropTypes.string,
   points: PropTypes.number,
+  widgetMargin: PropTypes.string,
 };
 
 LoggedInView.defaultProps = {
+  buttonBackgroundColor: null,
+  buttonFontColor: null,
   firstName: null,
+  headerTextColor: null,
   points: 0,
+  widgetMargin: null,
 };
 
 export default LoggedInView;
