@@ -25,11 +25,11 @@ const RedeemProductsSlider = ({ fetchProducts, redeemProductIds }) => {
     fetchProducts(redeemProductIds);
   }, [redeemProductIds]);
 
+  const { ProductSlider } = useTheme();
+
   if (!redeemProductIds.length) {
     return null;
   }
-
-  const { ProductSlider } = useTheme();
 
   return (
     <div>
