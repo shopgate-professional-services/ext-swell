@@ -61,7 +61,7 @@ export const getSwellRedemptionOptionsTypeProductIds = createSelector(
   redemptionProducts => redemptionProducts.map(({ appliesToId }) => appliesToId)
 );
 
-export const getSwellRedemptionOptionsTypeProductById = createSelector(
+export const getSwellRedemptionOptionsTypeProductByProductId = createSelector(
   getSwellRedemptionOptionsTypeProducts,
   (_, { productId }) => productId,
   (redemptionProducts, productId) => (

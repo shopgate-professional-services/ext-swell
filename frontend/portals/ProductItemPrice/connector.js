@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { getSwellRedemptionOptionsTypeProductById } from '../../selectors';
+import { getSwellRedemptionOptionsTypeProductByProductId } from '../../selectors';
 
 /**
  * Maps state to prop
@@ -8,7 +8,7 @@ import { getSwellRedemptionOptionsTypeProductById } from '../../selectors';
  * @return {Object}
  */
 const mapStateToProps = (state, props) => ({
-  redeemProduct: getSwellRedemptionOptionsTypeProductById(state, props),
+  redeemProduct: getSwellRedemptionOptionsTypeProductByProductId(state, props),
 });
 
 export default connect(mapStateToProps);
