@@ -27,7 +27,7 @@ const NavDrawerItem = ({ Item }) => {
 };
 
 NavDrawerItem.propTypes = {
-  Item: PropTypes.func.isRequired,
+  Item: PropTypes.shape.isRequired,
 };
 
 export default NavDrawerItem;

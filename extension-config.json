@@ -54,6 +54,12 @@
       "id": "GlobalCssRules"
     },
     {
+      "id": "SwellWelcome",
+      "path": "frontend/widgets/SwellWelcome/index.jsx",
+      "type": "widgets",
+      "description": "Swell welcome widget"
+    },
+    {
       "id": "SwellActiveCampaigns",
       "path": "frontend/widgets/SwellActiveCampaigns/index.jsx",
       "type": "widgets",
