@@ -1,4 +1,4 @@
-import { appDidStart$, logger } from '@shopgate/engage/core';
+import { appDidStart$, logger, routeDidEnter$ } from '@shopgate/engage/core';
 import { getUserData, userDataReceived$, userDidLogout$ } from '@shopgate/engage/user';
 import {
   clearSwellCustomerData,
@@ -73,6 +73,13 @@ export default (subscribe) => {
     swellNeedsLogin = true;
 
     dispatch(clearSwellCustomerData());
+  });
+
+  subscribe(routeDidEnter$, () => {
+    if (window.swellAPI) {
+      // will not work correctly if not called in a timeout
+      setTimeout(() => { window.swellAPI.refreshEmbeds(); }, 0);
+    }
   });
 };
 
