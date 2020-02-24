@@ -1,29 +1,7 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.1",
   "id": "@shopgate-project/swell",
   "components": [
-    {
-      "id": "Subscribers",
-      "path": "frontend/subscriptions/index.js",
-      "type": "subscribers"
-    },
-    {
-      "id": "swellCustomer",
-      "path": "frontend/reducers/swellCustomer.js",
-      "type": "reducers"
-    },
-    {
-      "type": "portals",
-      "target": "app.globals",
-      "path": "frontend/portals/GlobalCssRules",
-      "id": "GlobalCssRules"
-    },
-    {
-      "id": "SwellWelcome",
-      "path": "frontend/widgets/SwellWelcome/index.jsx",
-      "type": "widgets",
-      "description": "Swell welcome widget"
-    },
     {
       "type": "translations",
       "path": "frontend/locale/en-US.json",
@@ -42,10 +20,56 @@
       "type": "portals"
     },
     {
-      "id": "TabBarItem",
+      "id": "ProductItemPrice",
+      "path": "frontend/portals/ProductItemPrice/index.jsx",
+      "target": "product-item.price",
+      "type": "portals"
+    },
+    {
+      "id": "CartRewards",
       "path": "frontend/portals/Cart/index.jsx",
       "target": "cart.coupon-field.after",
       "type": "portals"
+    },
+    {
+      "id": "RedeemProductsWidget",
+      "path": "frontend/widgets/RedeemProductsWidget",
+      "type": "widgets",
+      "description": "Redeem Product Widget"
+    },
+    {
+      "id": "RedeemOptionsWidget",
+      "path": "frontend/widgets/RedeemOptionsWidget",
+      "type": "widgets",
+      "description": "Redeem Options Widget"
+    },
+    {
+      "id": "Subscribers",
+      "path": "frontend/subscriptions/index.js",
+      "type": "subscribers"
+    },
+    {
+      "id": "swellReducer",
+      "path": "frontend/reducers/index.js",
+      "type": "reducers"
+    },
+    {
+      "type": "portals",
+      "target": "app.globals",
+      "path": "frontend/portals/GlobalCssRules",
+      "id": "GlobalCssRules"
+    },
+    {
+      "id": "SwellWelcome",
+      "path": "frontend/widgets/SwellWelcome/index.jsx",
+      "type": "widgets",
+      "description": "Swell welcome widget"
+    },
+    {
+      "id": "SwellActiveCampaigns",
+      "path": "frontend/widgets/SwellActiveCampaigns/index.jsx",
+      "type": "widgets",
+      "description": "Swell active campaings widget"
     }
   ],
   "configuration": {

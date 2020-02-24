@@ -1,61 +1,28 @@
 import {
-  REQUEST_SWELL_INITIATION,
-  RECEIVE_SWELL_INITIATED,
-  ERROR_SWELL_INITIATED,
-  RECEIVE_SWELL_IDENTIFY_CUSTOMER,
-  REQUEST_SWELL_IDENTIFY_CUSTOMER,
-  ERROR_SWELL_IDENTIFY_CUSTOMER,
+  RECEIVE_SWELL_CUSTOMER,
   CLEAR_SWELL_CUSTOMER_DATA,
+  RECEIVE_SWELL_ACTIVE_CAMPAIGNS,
+  RECEIVE_REDEMPTION_OPTIONS,
 } from '../constants';
-
-/**
- * Request Swell initiation
- * @return {Object}
- */
-export const requestSwellInitiation = () => ({
-  type: REQUEST_SWELL_INITIATION,
-});
-
-/**
- * Receive Swell initiation
- * @return {Object}
- */
-export const receiveSwellInitiation = () => ({
-  type: RECEIVE_SWELL_INITIATED,
-});
-
-/**
- * Error Swell initiation
- * @return {Object}
- */
-export const errorSwellInitiation = () => ({
-  type: ERROR_SWELL_INITIATED,
-});
-
-/**
- * Request swell id customer
- * @return {Object}
- */
-export const requestSwellIdentifyCustomer = () => ({
-  type: REQUEST_SWELL_IDENTIFY_CUSTOMER,
-});
 
 /**
  * Receive swell id customer
  * @param {Object} swellCustomer Swell customer
  * @return {Object}
  */
-export const receiveSwellIdentifyCustomer = swellCustomer => ({
-  type: RECEIVE_SWELL_IDENTIFY_CUSTOMER,
+export const receiveSwellCustomer = swellCustomer => ({
+  type: RECEIVE_SWELL_CUSTOMER,
   swellCustomer,
 });
 
 /**
- * Error swell id customer
+ * Receive swell id customer
+ * @param {Array} redemptionOptions Swell getActiveRedemptionOptions
  * @return {Object}
  */
-export const errorSwellIdentifyCustomer = () => ({
-  type: ERROR_SWELL_IDENTIFY_CUSTOMER,
+export const receiveRedemptionOptions = redemptionOptions => ({
+  type: RECEIVE_REDEMPTION_OPTIONS,
+  redemptionOptions,
 });
 
 /**
@@ -64,4 +31,14 @@ export const errorSwellIdentifyCustomer = () => ({
  */
 export const clearSwellCustomerData = () => ({
   type: CLEAR_SWELL_CUSTOMER_DATA,
+});
+
+/**
+ * Receive swell active campaigns data
+ * @param {Object} activeCampaigns Swell activeCampaigns info
+ * @return {Object}
+ */
+export const receiveSwellActiveCampaigns = activeCampaigns => ({
+  type: RECEIVE_SWELL_ACTIVE_CAMPAIGNS,
+  activeCampaigns,
 });

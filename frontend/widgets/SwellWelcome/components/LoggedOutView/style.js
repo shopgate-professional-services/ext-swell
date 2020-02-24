@@ -1,13 +1,17 @@
 import { css } from 'glamor';
+import { themeConfig } from '@shopgate/pwa-common/helpers/config';
+
+const { colors: { primary, primaryContrast } } = themeConfig;
 
 /**
- * @param {string} color font color for widget
- * @param {string} backgroundImage background image for widget
+ * @param {string} [color] font color for widget
+ * @param {string} [background] background for widget
+ * @param {string} [margin] margin value for widget
  * @returns {Function}
  */
-const container = (color, backgroundImage) => css({
-  color,
-  backgroundImage,
+const container = (color, background, margin) => css({
+  color: color || primary,
+  background,
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
@@ -15,6 +19,7 @@ const container = (color, backgroundImage) => css({
   height: '450px',
   width: '100%',
   textAlign: 'center',
+  margin: margin || '10px 0',
 }).toString();
 
 const title = css({
@@ -30,16 +35,22 @@ const subtext = css({
   marginBottom: '30px',
 }).toString();
 
-const joinButton = css({
+/**
+ * Get join button style
+ * @param {string} [buttonBackgroundColor] Background color string
+ * @param {string} [buttonFontColor] Text color string
+ * @return {string}
+ */
+const joinButton = (buttonBackgroundColor, buttonFontColor) => css({
   fontSize: '18px',
   marginBottom: '10px',
-  backgroundColor: '#002554',
-  color: '#fff',
+  backgroundColor: buttonBackgroundColor || primary,
+  color: buttonFontColor || primaryContrast,
   width: '50%',
   maxWidth: '175px',
   padding: '10px',
   borderRadius: '5px',
-  border: '1px solid #002554',
+  border: `1px solid ${buttonBackgroundColor || primary}`,
   textAlign: 'center',
 }).toString();
 

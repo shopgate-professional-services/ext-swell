@@ -9,12 +9,11 @@ import connect from './connector';
  */
 const SwellWelcome = ({
   firstName,
-  isFetching,
   loggedIn,
   settings,
   points,
 }) => {
-  if (isFetching) {
+  if (!settings) {
     return null;
   }
 
@@ -30,8 +29,9 @@ const SwellWelcome = ({
     signUpText,
     accountText,
     signInText,
-    loggedOutBackgroundImage,
-  } = settings || {};
+    loggedOutBackground,
+    widgetMargin,
+  } = settings;
 
   return loggedIn ?
     <LoggedInView
@@ -42,6 +42,7 @@ const SwellWelcome = ({
       firstName={firstName}
       points={points}
       redeemButtonText={redeemButtonText}
+      widgetMargin={widgetMargin}
     /> :
     <LoggedOutView
       loggedOutTitleFontColor={loggedOutTitleFontColor}
@@ -50,13 +51,15 @@ const SwellWelcome = ({
       signUpText={signUpText}
       accountText={accountText}
       signInText={signInText}
-      loggedOutBackgroundImage={loggedOutBackgroundImage}
+      loggedOutBackground={loggedOutBackground}
+      widgetMargin={widgetMargin}
+      buttonBackgroundColor={buttonBackgroundColor}
+      buttonFontColor={buttonFontColor}
     />;
 };
 
 SwellWelcome.propTypes = {
   firstName: PropTypes.string,
-  isFetching: PropTypes.bool,
   loggedIn: PropTypes.bool,
   points: PropTypes.number,
   settings: PropTypes.shape(),
@@ -64,7 +67,6 @@ SwellWelcome.propTypes = {
 
 SwellWelcome.defaultProps = {
   firstName: null,
-  isFetching: true,
   loggedIn: false,
   points: 0,
   settings: {},

@@ -19,13 +19,14 @@ Example configuration for the following images:
     "headerTextColor": "#022653",
     "historyButtonText": "reward history",
     "redeemButtonText": "redeem now",
-	"loggedOutTitleFontColor": "#002554",
+	  "loggedOutTitleFontColor": "#002554",
     "loggedOutTitle": "rewards",
     "loggedOutSubtext": "Get closer to earning special rewards everytime you shop on drinkhint.com",
     "signUpText": "sign up",
     "accountText": "Already have an account?",
     "signInText": "Sign In to see your points.",
-	"loggedOutBackgroundImage": "url(//cdn.shopify.com/s/files/1/0014/3015/9418/files/swell-banner.jpg?140743)"
+    "loggedOutBackground": "url(//cdn.shopify.com/s/files/1/0014/3015/9418/files/swell-banner.jpg?140743)",
+    "widgetMargin": "10px 0"
   }
 }
 -->
