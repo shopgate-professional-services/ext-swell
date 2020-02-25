@@ -15,10 +15,6 @@ const SwellActiveCampaigns = ({
   getSwellPopup,
   openPageExtern,
 }) => {
-  if (!activeCampaigns) {
-    return null;
-  }
-
   /**
    * Modify click handlers for Swell modal links
    * @param {Event} event Event
@@ -60,6 +56,10 @@ const SwellActiveCampaigns = ({
       };
     }
   }, [activeCampaigns]);
+
+  if (!activeCampaigns) {
+    return null;
+  }
 
   const { backgroundColor, fontColor } = settings;
 
