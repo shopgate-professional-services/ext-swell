@@ -70,7 +70,7 @@
     "swellSdkUrl": {
       "type": "admin",
       "destination": "frontend",
-      "default": "https://cdn.swellrewards.com/loader/JiY-wIwEaNemLIT7R1Nbhg.js",
+      "default": "https://cdn-loyalty.yotpo.com/loader/5vFkRXlfSVXWyzNm5rkm_A.js",
       "params": {
         "type": "text",
         "label": "SRC to Swell JavaScript sdk"

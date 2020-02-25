@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { css } from 'glamor';
 import { I18n } from '@shopgate/engage/components';
@@ -20,9 +20,16 @@ const headline = css({
  * RedeemOptions component
  * @param {Object[]} redeemOptions Swell redemption option
  * @param {Object} settings Widget settings object
+ * @param {Function} refreshSwell Function to call window.swellAPI.refreshEmbeds
  * @return {JSX}
  */
-const RedeemOptions = ({ redeemOptions, settings }) => {
+const RedeemOptions = ({ redeemOptions, settings, refreshSwell }) => {
+  useEffect(() => {
+    if (redeemOptions.length) {
+      refreshSwell();
+    }
+  }, [redeemOptions]);
+
   if (!redeemOptions.length) {
     return null;
   }
@@ -37,7 +44,7 @@ const RedeemOptions = ({ redeemOptions, settings }) => {
         {
           redeemOptions.map(redeemOption => (
             <RedeemOptionItem
-              key={`option-id-${redeemOption.id}`}
+              key={redeemOption.id}
               redeemOption={redeemOption}
               backgroundColor={backgroundColor}
               textColor={textColor}
@@ -51,11 +58,13 @@ const RedeemOptions = ({ redeemOptions, settings }) => {
 
 RedeemOptions.propTypes = {
   redeemOptions: PropTypes.arrayOf(PropTypes.shape()),
+  refreshSwell: PropTypes.func,
   settings: PropTypes.shape(),
 };
 
 RedeemOptions.defaultProps = {
   redeemOptions: [],
+  refreshSwell: () => {},
   settings: {},
 };
 

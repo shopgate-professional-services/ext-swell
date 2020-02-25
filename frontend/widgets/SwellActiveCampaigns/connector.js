@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { getSwellActiveCampaigns } from '../../selectors';
+import refreshSwell from '../../helpers/refreshSwell';
 
 /**
  * @param {Object} state Redux state
@@ -7,6 +8,7 @@ import { getSwellActiveCampaigns } from '../../selectors';
  */
 const mapStateToProps = state => ({
   activeCampaigns: getSwellActiveCampaigns(state),
+  refreshSwell,
 });
 
 export default connect(mapStateToProps);
