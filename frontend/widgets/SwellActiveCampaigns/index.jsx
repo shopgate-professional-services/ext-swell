@@ -40,6 +40,7 @@ const SwellActiveCampaigns = ({
           if (!swellPopupDoc) {
             return;
           }
+
           swellPopup = swellPopupDoc;
           swellPopupDoc.addEventListener('click', modifyClicks, true);
           swellPopupDoc.addEventListener('touchstart', modifyClicks, true);
