@@ -15,20 +15,20 @@ const RedeemOptionItem = ({
   redeemOption,
   backgroundColor,
   textColor,
-  key,
 }) => {
   const {
     costInPoints,
     costText,
     name,
     backgroundImageUrl,
+    id,
   } = redeemOption;
   const pointsPrice = costText || <I18n.Text string="swell.points" params={{ points: costInPoints }} />;
 
   return (
     <div
-      key={key}
-      className={styles.container(backgroundColor, textColor, backgroundImageUrl)}
+      className={`${styles.container(backgroundColor, textColor, backgroundImageUrl)} swell-redemption-link`}
+      data-redemption-option-id={id}
     >
       <div>
         <p className={styles.name}>{name}</p>
@@ -39,7 +39,6 @@ const RedeemOptionItem = ({
 };
 
 RedeemOptionItem.propTypes = {
-  key: PropTypes.string.isRequired,
   redeemOption: PropTypes.shape().isRequired,
   backgroundColor: PropTypes.string,
   textColor: PropTypes.string,
