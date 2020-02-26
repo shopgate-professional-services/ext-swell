@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
-import { getUserFirstName, isUserLoggedIn } from '@shopgate/engage/user';
-import { getSwellCustomerPoints, getSwellCustomerIsFetching } from '../../selectors';
+import { getSwellCustomerPoints } from '../../selectors';
 
 /**
  * @param {Object} state Redux state
