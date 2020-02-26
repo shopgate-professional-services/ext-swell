@@ -31,7 +31,7 @@ const RedeemOptions = ({ redeemOptions, settings }) => {
   return (
     <div>
       <h2 className={headline}>
-        {title || <I18n.Text string="swell.rewards" />}
+        <I18n.Text string={title || 'swell.rewards'} />
       </h2>
       <div className={optionWrapper}>
         {

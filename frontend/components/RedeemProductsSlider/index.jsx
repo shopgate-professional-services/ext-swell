@@ -14,9 +14,10 @@ const headline = css({
  * RedeemProductsSlider
  * @param {Function} fetchProducts Fetch products
  * @param {string[]} redeemProducts Swell product redemption option Id
+ * @param {Object} settings Widget settings object
  * @return {JSX}
  */
-const RedeemProductsSlider = ({ fetchProducts, redeemProductIds }) => {
+const RedeemProductsSlider = ({ fetchProducts, redeemProductIds, settings }) => {
   useEffect(() => {
     if (!redeemProductIds.length) {
       return;
@@ -31,10 +32,12 @@ const RedeemProductsSlider = ({ fetchProducts, redeemProductIds }) => {
     return null;
   }
 
+  const { title } = settings || {};
+
   return (
     <div>
       <h2 className={headline}>
-        <I18n.Text string="swell.redeem_for_products" />
+        <I18n.Text string={title || 'swell.redeem_for_products'} />
       </h2>
       <ProductSlider
         productIds={redeemProductIds}
@@ -46,10 +49,12 @@ const RedeemProductsSlider = ({ fetchProducts, redeemProductIds }) => {
 RedeemProductsSlider.propTypes = {
   fetchProducts: PropTypes.func.isRequired,
   redeemProductIds: PropTypes.arrayOf(PropTypes.string),
+  settings: PropTypes.shape(),
 };
 
 RedeemProductsSlider.defaultProps = {
   redeemProductIds: [],
+  settings: {},
 };
 
 export default connect(RedeemProductsSlider);

@@ -3,8 +3,9 @@ import RedeemProductsSlider from '../../components/RedeemProductsSlider';
 
 /**
  * RedeemProductsWidget
+ * @param {Object} props Component options
  * @return {JSX}
  */
-const RedeemProductsWidget = () => <RedeemProductsSlider />;
+const RedeemProductsWidget = props => <RedeemProductsSlider {...props} />;
 
 export default RedeemProductsWidget;
