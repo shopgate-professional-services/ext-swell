@@ -26,6 +26,12 @@
       "type": "portals"
     },
     {
+      "id": "CartRewards",
+      "path": "frontend/portals/Cart/index.jsx",
+      "target": "cart.coupon-field.after",
+      "type": "portals"
+    },
+    {
       "id": "RedeemProductsWidget",
       "path": "frontend/widgets/RedeemProductsWidget",
       "type": "widgets",
