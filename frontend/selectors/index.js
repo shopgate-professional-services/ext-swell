@@ -60,30 +60,6 @@ export const getSwellCustomerPoints = createSelector(
   }
 );
 
-export const getSwellRedemptionOptionsTypeProducts = createSelector(
-  getSwellRedemptionOptionsState,
-  (redemptionOptions) => {
-    if (!redemptionOptions) {
-      return [];
-    }
-
-    return redemptionOptions.filter(({ discountType }) => discountType === 'product');
-  }
-);
-
-export const getSwellRedemptionOptionsTypeProductIds = createSelector(
-  getSwellRedemptionOptionsTypeProducts,
-  redemptionProducts => redemptionProducts.map(({ appliesToId }) => appliesToId)
-);
-
-export const getSwellRedemptionOptionsTypeProductByProductId = createSelector(
-  getSwellRedemptionOptionsTypeProducts,
-  (_, { productId }) => productId,
-  (redemptionProducts, productId) => (
-    redemptionProducts.find(({ appliesToId }) => `${appliesToId}` === productId) || null
-  )
-);
-
 export const getSwellRedemptionOptionsTypeOther = createSelector(
   getSwellRedemptionOptionsState,
   (redemptionOptions) => {
