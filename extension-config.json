@@ -120,6 +120,16 @@
         "type": "text",
         "required": false
       }
+    },
+    "allowedCampaigns": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": ["Make a purchase", "Create an account"],
+      "params": {
+        "label": "Titles of swell campaigns allowed to be shown on the app",
+        "type": "json",
+        "description": "An array of the titles of swell campaigns (ways to earn) that can be shown on the app. The app supports purchase and sign up for an account"
+      }
     }
   }
 }

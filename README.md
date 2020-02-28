@@ -23,6 +23,14 @@ Widget can be configured in Shopgate Merchant admin and serves as a welcome noti
 - `loggedOutBackground` (string): css background value for logged out view
 - `widgetMargin` (string): css margin value for widget
 
+### Swell Extension Config
+- `swellSdkUrl` (string): SRC to Swell JavaScript sdk loader
+- `showSwellNavigation` (boolean): Should show navigation button in tab bar and nav drawer
+- `swellButtonText` (string): Swell text for button that leads to Rewards Page
+- `swellRewardsPath` (string): Swell Rewards Path
+- `swellIconSvg` (string): Svg for swell icon
+- `allowedCampaigns` (Array): Titles of swell campaigns allowed to be shown on the app
+
 ## About Shopgate	
 
 Shopgate is the leading mobile commerce platform.	
