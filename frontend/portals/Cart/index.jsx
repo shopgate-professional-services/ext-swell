@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { css } from 'glamor';
 import { I18n } from '@shopgate/engage/components';
 import RedeemOptions from '../../components/RedeemOptions';
-import RedeemProductsSlider from '../../components/RedeemProductsSlider';
 import connect from './connector';
 
 const pointsWrapper = css({
@@ -29,7 +28,6 @@ const Cart = ({ points }) => {
       </div>
 
       <RedeemOptions settings={{ title: 'swell.redeem_for_discounts' }} />
-      <RedeemProductsSlider />
     </div>
   );
 };

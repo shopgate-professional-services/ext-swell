@@ -1,3 +1,7 @@
+/*
+ * This component is not yet used.
+ * It is being left because it may be used in the future.
+ */
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { css } from 'glamor';
