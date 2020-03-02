@@ -1,5 +1,6 @@
 import { createSelector } from 'reselect';
 import { REDUX_NAMES_SPACE_SWELL } from '../constants';
+import { allowedCampaigns } from '../config'
 
 /**
  * @param {Object} state The application State
@@ -17,9 +18,13 @@ export const getSwellActiveCampaignsState = state => getSwellState(state).active
 export const getSwellActiveCampaigns = createSelector(
   getSwellActiveCampaignsState,
   (activeCampaigns) => {
-    const { data = null } = activeCampaigns || {};
+    const { data } = activeCampaigns || {};
 
-    return data;
+    if (!Array.isArray(data) || !data.length) {
+      return null;
+    }
+
+    return data.filter(({ title }) => allowedCampaigns.includes(title));
   }
 );
 
