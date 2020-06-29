@@ -1,0 +1,18 @@
+{
+  "swell": {
+    "rewards_button": "Rewards",
+    "points": "{points, plural, =0 {# Points} =1 {# Point} other {# Points}}",
+    "redeem_for_products": "Redeem for Products",
+    "redeem_for_discounts": "Redeem for Discounts",
+    "rewards": "Rewards",
+    "welcome": {
+      "greeting": "Hi, {firstName}",
+      "points": "You have {points} points",
+      "join_button": "Join now",
+      "sign_in_link": "Sign in"
+    },
+    "cart": {
+      "points": "You have {points} rewards points"
+    }
+  }
+}

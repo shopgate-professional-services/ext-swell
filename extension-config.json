@@ -1,8 +1,135 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.0-beta.1",
   "id": "@shopgate-project/swell",
   "components": [
+    {
+      "type": "translations",
+      "path": "frontend/locale/en-US.json",
+      "id": "locale/en-US"
+    },
+    {
+      "id": "NavDrawerItem",
+      "path": "frontend/portals/NavDrawerItem/index.jsx",
+      "target": "nav-menu.home.before",
+      "type": "portals"
+    },
+    {
+      "id": "TabBarItem",
+      "path": "frontend/portals/TabBarItem/index.jsx",
+      "target": "tab-bar.cart.after",
+      "type": "portals"
+    },
+    {
+      "id": "ProductItemPrice",
+      "path": "frontend/portals/ProductItemPrice/index.jsx",
+      "target": "product-item.price",
+      "type": "portals"
+    },
+    {
+      "id": "CartRewards",
+      "path": "frontend/portals/Cart/index.jsx",
+      "target": "cart.coupon-field.after",
+      "type": "portals"
+    },
+    {
+      "id": "RedeemProductsWidget",
+      "path": "frontend/widgets/RedeemProductsWidget",
+      "type": "widgets",
+      "description": "Redeem Product Widget"
+    },
+    {
+      "id": "RedeemOptionsWidget",
+      "path": "frontend/widgets/RedeemOptionsWidget",
+      "type": "widgets",
+      "description": "Redeem Options Widget"
+    },
+    {
+      "id": "Subscribers",
+      "path": "frontend/subscriptions/index.js",
+      "type": "subscribers"
+    },
+    {
+      "id": "swellReducer",
+      "path": "frontend/reducers/index.js",
+      "type": "reducers"
+    },
+    {
+      "type": "portals",
+      "target": "app.globals",
+      "path": "frontend/portals/GlobalCssRules",
+      "id": "GlobalCssRules"
+    },
+    {
+      "id": "SwellWelcome",
+      "path": "frontend/widgets/SwellWelcome/index.jsx",
+      "type": "widgets",
+      "description": "Swell welcome widget"
+    },
+    {
+      "id": "SwellActiveCampaigns",
+      "path": "frontend/widgets/SwellActiveCampaigns/index.jsx",
+      "type": "widgets",
+      "description": "Swell active campaings widget"
+    }
   ],
   "configuration": {
+    "swellSdkUrl": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": "https://cdn-loyalty.yotpo.com/loader/5vFkRXlfSVXWyzNm5rkm_A.js",
+      "params": {
+        "type": "text",
+        "label": "SRC to Swell JavaScript sdk"
+      }
+    },
+    "showSwellNavigation": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": true,
+      "params": {
+        "label": "Should show navigation button in tab bar and nav drawer",
+        "type": "checkbox"
+      }
+    },
+    "swellButtonText": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": null,
+      "params": {
+        "label": "Swell text for button that leads to Rewards Page",
+        "type": "text",
+        "required": false
+      }
+    },
+    "swellRewardsPath": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": "/page/rewards",
+      "params": {
+        "label": "Swell Rewards Path",
+        "type": "text",
+        "required": true
+      }
+    },
+    "swellIconSvg": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": null,
+      "params": {
+        "label": "Svg for swell icon",
+        "type": "text",
+        "required": false
+      }
+    },
+    "allowedCampaigns": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": ["Make a purchase", "Create an account"],
+      "params": {
+        "label": "Titles of swell campaigns allowed to be shown on the app",
+        "type": "json",
+        "description": "An array of the titles of swell campaigns (ways to earn) that can be shown on the app. The app supports purchase and sign up for an account"
+      }
+    }
   }
 }
